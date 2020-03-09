@@ -17,6 +17,8 @@ public class ASumar {
 	 */
     public String mostrar() {
         String numero = valor_inicial;
+        if(Integer.parseInt(numero) <0)
+        	return numero + " = 0";
         if (numero.length() == 1) {
             return (numero + " = " + numero);
         }
