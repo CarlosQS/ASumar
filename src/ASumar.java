@@ -20,9 +20,24 @@ public class ASumar {
         if (numero.length() == 1) {
             return (numero + " = " + numero);
         }
+        if (numero.length() > 1) {
+            return (numero + " = " + total());
+        }
         return null;
     }
     
-    
-	
+    /**
+     * Método que suma dígito a dígito un número.
+     * @return Devuelve la suma del número
+     */
+    public int total() {
+        int suma = 0;
+
+        for (int i = 0; i < valor_inicial.length(); i++) {
+            String digito = valor_inicial.substring(i, i+1);
+            suma += Integer.parseInt(digito);
+        }
+        return suma;
+
+    }
 }
